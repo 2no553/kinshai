@@ -1,46 +1,41 @@
 #!/bin/bash
 
-set -x
-
-# Vagrant起動
-vagrant up
-
-# ssh接続
-vagrant ssh
-# user：vagrant
-# password：vagrant
+set -Ceux
 
 # OSアップデート
-sudo yum update -y
+yum update -y
 
 # タイムゾーン変更
-sudo timedatectl set-timezone Asia/Tokyo
+timedatectl set-timezone Asia/Tokyo
 
 # システムロケール変更
-sudo localectl set-locale LANG=ja_JP.UTF-8
+localectl set-locale LANG=ja_JP.UTF-8
 
 # 開発ツールインストール
-sudo yum groupinstall 'Development Tools' -y
+yum groupinstall 'Development Tools' -y
 
 # Nodeインストール
-su -
 curl -sL https://rpm.nodesource.com/setup_10.x | bash -
-exit
-sudo yum install nodejs -y
+yum install nodejs -y
 
 # Error: EACCES: permission denied, access対策
+su - vagrant << EOS
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo export PATH=~/.npm-global/bin:$PATH >> ~/.bash_profile
 source ~/.bash_profile
+EOS
 
 # gatsbyインストール
-npm install --global gatsby-cli
+#npm install --global gatsby-cli
 
 # gatsbyサンプルプロジェクト作成
-cd /vagrant
-gatsby new gatsby-site
+#cd /vagrant
+#gatsby new gatsby-site
 
 # gatbyスタート
-cd gatsby-site
-gatsby develop --host=0.0.0.0
+#cd gatsby-site
+#gatsby develop --host=0.0.0.0
+
+# ssh時のディレクトリをvagrantに設定
+#echo 'cd /vagrant' >> /home/vagrant/.bash_profile
