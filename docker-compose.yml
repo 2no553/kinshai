@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  app:
+    build: ./docker/node/
+    container_name: gatsby
+    environment:
+      - TZ=Asia/Tokyo
+    working_dir: /srv
+    #volumes:
+      #- .:/srv/app
+      #- /srv/app/node_modules
+    ports:
+      - "8000:8000"
+    tty: true
