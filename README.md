@@ -35,8 +35,10 @@
 
 2. clone source code  
 git clone https://github.com/gatsbyjs/gatsby-starter-default.git app
+   - [Starter Library \| GatsbyJS](https://www.gatsbyjs.org/starters/?v=2)  
+※git clone `Starterのurl` `clone後のディレクトリ名`
 
-3. start vagrant provision  
+1. start vagrant provision  
 cd vagrant  
 vagrant up  
 
@@ -50,7 +52,6 @@ http://localhost:8000/
 
 1. how to use Gatsby
 - [Gatsby\.js Tutorial \| GatsbyJS](https://www.gatsbyjs.org/tutorial/)
-- [Starter Library \| GatsbyJS](https://www.gatsbyjs.org/starters/?v=2)
 
 2. how to use ssh from VM
 - [ssh\-agentを使ってVagrant上のゲストOSからMac側の秘密鍵を使えるようにする \| Firegoby](https://firegoby.jp/archives/5694)
