@@ -36,9 +36,9 @@
 2. clone source code  
 git clone https://github.com/gatsbyjs/gatsby-starter-default.git app
    - [Starter Library \| GatsbyJS](https://www.gatsbyjs.org/starters/?v=2)  
-※git clone `Starterのurl` `clone後のディレクトリ名`
+   ※git clone `Starterのurl` `clone後のディレクトリ名`
 
-1. start vagrant provision  
+3. start vagrant provision  
 cd vagrant  
 vagrant up  
 
