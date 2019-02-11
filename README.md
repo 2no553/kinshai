@@ -10,18 +10,18 @@
 ```
 .
 ├── README.md
-├── app
+├── lumen
 │   ├── LICENSE
 │   ├── README.md
-│   ├── gatsby-browser.js
 │   ├── gatsby-config.js
 │   ├── gatsby-node.js
-│   ├── gatsby-ssr.js
+│   ├── netlify.toml
 │   ├── node_modules
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── public
 │   ├── src
+│   ├── travis.yml
 │   └── yarn.lock
 └── vagrant
     ├── Vagrantfile
@@ -34,7 +34,7 @@
 - [Oracle VM VirtualBox](https://www.virtualbox.org/)
 
 2. clone source code  
-git clone https://github.com/gatsbyjs/gatsby-starter-default.git app
+git clone https://github.com/GatsbyCentral/gatsby-v2-starter-lumen app
    - [Starter Library \| GatsbyJS](https://www.gatsbyjs.org/starters/?v=2)  
    ※git clone `Starterのurl` `clone後のディレクトリ名`
 
@@ -43,8 +43,9 @@ cd vagrant
 vagrant up  
 
 4. open start-page  
-vagrant reload
-vagrant ssh -c "cd /vagrant/app; bash"  
+vagrant reload  
+vagrant ssh -c "cd /vagrant; bash"  
+cd app
 npm run develop -- --host=0.0.0.0  
 http://localhost:8000/
 
@@ -55,3 +56,7 @@ http://localhost:8000/
 
 2. how to use ssh from VM
 - [ssh\-agentを使ってVagrant上のゲストOSからMac側の秘密鍵を使えるようにする \| Firegoby](https://firegoby.jp/archives/5694)
+
+3. npm error
+- [npm トラブルシューティング \- Qiita](https://qiita.com/hatai/items/ba6eadb758a667345b27)
+- [npm\|yarnで怒られたエラー集まとめ。WARN\[deprecated,unmet dependency,peerDependencies,EPEERINVALID,engine\]ERR\!\[missing,invalid\],throw er; // Unhandled &\#39;error&\#39; eventの解決方法。\(2018/11/24更新\) \- Qiita](https://qiita.com/M-ISO/items/d693ac892549fc95c14c)

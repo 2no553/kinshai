@@ -4,7 +4,7 @@ set -xeu -C
 
 # install development tools
 yum upgrade -y
-yum groupinstall -y 'Development Tools'
+yum groupinstall -y 'Development Tools' libGL
 
 # set linux
 sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
