@@ -41,22 +41,22 @@ git clone https://github.com/GatsbyCentral/gatsby-v2-starter-lumen app
 
 3. start vagrant provision  
 cd vagrant  
-
-4. open start-page  
 vagrant up  
+
+4. vagrant ssh  
 vagrant ssh -c "cd /vagrant; bash"  
 
 ```
-※共有マウントに失敗する場合はインストール
-vagrant plugin install vagrant-vbguest
-vagrant reload
+※共有マウントに失敗する場合はインストール  
+vagrant plugin install vagrant-vbguest  
+vagrant reload  
 ```
 
+5. open start-page  
 cd app  
 npm install  
 npm audit fix  
 npm run develop -- --host=0.0.0.0  
-
 http://localhost:8000/
 
 ### reference
