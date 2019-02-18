@@ -14,9 +14,3 @@ localectl set-locale LANG=ja_JP.UTF-8
 # install node
 curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 yum install -y nodejs
-
-# install gatsby-cli
-su - vagrant << EOC
-cd /vagrant/app
-npm install gatsby-cli
-EOC

@@ -34,19 +34,29 @@
 - [Oracle VM VirtualBox](https://www.virtualbox.org/)
 
 2. clone source code  
+※既にclone済みなので説明用に記載しているだけでこの手順は必要ない
 git clone https://github.com/GatsbyCentral/gatsby-v2-starter-lumen app
    - [Starter Library \| GatsbyJS](https://www.gatsbyjs.org/starters/?v=2)  
    ※git clone `Starterのurl` `clone後のディレクトリ名`
 
 3. start vagrant provision  
 cd vagrant  
-vagrant up  
 
 4. open start-page  
-vagrant reload  
+vagrant up  
 vagrant ssh -c "cd /vagrant; bash"  
-cd app
+
+```
+※共有マウントに失敗する場合はインストール
+vagrant plugin install vagrant-vbguest
+vagrant reload
+```
+
+cd app  
+npm install  
+npm audit fix  
 npm run develop -- --host=0.0.0.0  
+
 http://localhost:8000/
 
 ### reference
