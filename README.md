@@ -58,5 +58,6 @@ docker volume rm kinshai_node_modules
 
 ### reference
 - [Gatsby\.js Tutorial \| GatsbyJS](https://www.gatsbyjs.org/tutorial/)
+- [Netlify: All\-in\-one platform for automating modern web projects\.](https://www.netlify.com/)
 - [npm\|yarnで怒られたエラー集まとめ。WARN\[deprecated,unmet dependency,peerDependencies,EPEERINVALID,engine\]ERR\!\[missing,invalid\],throw er; // Unhandled &\#39;error&\#39; eventの解決方法。\(2018/11/24更新\) \- Qiita](https://qiita.com/M-ISO/items/d693ac892549fc95c14c)
 - [npm トラブルシューティング \- Qiita](https://qiita.com/hatai/items/ba6eadb758a667345b27)
