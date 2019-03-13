@@ -1,30 +1,33 @@
-# kinshai
-
 ### version ?
 - OS：Debian GNU/Linux 8 (jessie)
-- node：v10.15.1
+- node：v10.15.3
 - npm：6.4.1
-- gatsby-cli：2.4.9
+- yarn：1.13.0
+- gatsby-cli：2.4.15
 
 ### directory ?
 ```
 .
-├── Dockerfile
 ├── README.md
 ├── app
-│   ├── LICENSE
-│   ├── README.md
-│   ├── gatsby-config.js
-│   ├── gatsby-node.js
-│   ├── netlify.toml
-│   ├── node_modules
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── public
-│   ├── src
-│   ├── travis.yml
-│   └── yarn.lock
+│   ├── LICENSE
+│   ├── README.md
+│   ├── gatsby-config.js
+│   ├── gatsby-node.js
+│   ├── netlify.toml
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   ├── src
+│   ├── travis.yml
+│   └── yarn.lock
 └── docker-compose.yml
+```
+
+### first create app ?
+```
+git clone https://github.com/GatsbyCentral/gatsby-v2-starter-lumen app
 ```
 
 ### how to start Docker ?
@@ -33,36 +36,27 @@
 https://www.docker.com/
 
 2. start docker
-docker-compose up --d --build
+git clone https://github.com/froide-sub-ninomiya/kinshai.git
+cd kinshai/
+docker-compose up -d --build
 
-3. in container
+3. setting gatsby
 docker-compose exec app sh
+yarn global add gatsby-cli
+yarn install
 
-4. setting gatsby
-npm install gatsby-cli
-npm install
-npm audit fix
-
-5. open start-page
-npm run develop -- --host=0.0.0.0
+4. open start-page
+gatsby develop --host=0.0.0.0
 http://localhost:8000/
 ```
 
-#### node_modulesはVolumeTrickで登録
+#### node_modulesのリソースを削除するときは以下のコマンドを実行
 ```
-1. list volume
 docker volume ls
-
-2. delete volume
-※docker-compose downだけではvolumeは削除されない
-docker-compose down -v
+docker volume rm kinshai_node_modules
 ```
 
 ### reference
-
-1. how to use Gatsby
 - [Gatsby\.js Tutorial \| GatsbyJS](https://www.gatsbyjs.org/tutorial/)
-
-2. npm error
 - [npm\|yarnで怒られたエラー集まとめ。WARN\[deprecated,unmet dependency,peerDependencies,EPEERINVALID,engine\]ERR\!\[missing,invalid\],throw er; // Unhandled &\#39;error&\#39; eventの解決方法。\(2018/11/24更新\) \- Qiita](https://qiita.com/M-ISO/items/d693ac892549fc95c14c)
 - [npm トラブルシューティング \- Qiita](https://qiita.com/hatai/items/ba6eadb758a667345b27)
