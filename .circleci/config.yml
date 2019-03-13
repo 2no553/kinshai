@@ -3,23 +3,26 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.3-jessie
-    working_directory: ~/repo
+    working_directory: ~/repo/app
     steps:
       - checkout
-      - run: ls -la
-      # # Download and cache dependencies
-      # - restore_cache:
-      #     keys:
-      #       - v1-dependencies-{{ checksum "package.json" }}
-      #       # fallback to using the latest cache if no exact match is found
-      #       - v1-dependencies-
 
-      # - run: yarn install
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+      
+      - run: yarn global add gatsby-cli
 
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #     key: v1-dependencies-{{ checksum "package.json" }}
+      - run: yarn install
 
-      # # run tests!
-      # - run: yarn test
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run: yarn run lint
+      - run: echo finish
