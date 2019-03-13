@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.3-jessie
+    environment:
+      TZ: Asia/Toky
     working_directory: ~/repo
     steps:
       - checkout
