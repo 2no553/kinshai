@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.3-jessie
-    working_directory: ~/repo/app
+    working_directory: ~/app
     steps:
       - checkout
       # # Download and cache dependencies
