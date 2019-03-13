@@ -24,7 +24,7 @@
 └── docker-compose.yml
 ```
 
-### create app ?
+### first create app ?
 ```
 git clone https://github.com/GatsbyCentral/gatsby-v2-starter-lumen app
 ```
@@ -35,15 +35,17 @@ git clone https://github.com/GatsbyCentral/gatsby-v2-starter-lumen app
 https://www.docker.com/
 
 2. start docker
+git clone https://github.com/froide-sub-ninomiya/kinshai.git
+cd kinshai/
 docker-compose up -d --build
 
 3. setting gatsby
 docker-compose exec app sh
-npm install gatsby-cli
-npm install && npm audit fix
+yarn global add gatsby-cli
+yarn install
 
 4. open start-page
-npm run develop -- --host=0.0.0.0
+gatsby develop --host=0.0.0.0
 http://localhost:8000/
 ```
 
