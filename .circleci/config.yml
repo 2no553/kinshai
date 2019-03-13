@@ -6,8 +6,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: pwd
-      - run: whoami
+      - run: ls -la
       # # Download and cache dependencies
       # - restore_cache:
       #     keys:
