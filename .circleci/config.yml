@@ -16,7 +16,7 @@ jobs:
           paths:
             - app/node_modules
 
-      - run: ls -la
+      - run: date
 
       - run:
           working_directory: ~/repo/app
@@ -30,5 +30,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn run lint
-      - run: echo finish
+      - run:
+          working_directory: ~/repo/app
+          command: yarn run lint
