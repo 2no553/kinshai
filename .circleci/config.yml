@@ -13,6 +13,8 @@ jobs:
       #       # fallback to using the latest cache if no exact match is found
       #       - v1-dependencies-
       
+      - run: ls -la
+
       - run: yarn global add gatsby-cli
 
       - run: yarn install
@@ -23,5 +25,5 @@ jobs:
       #     key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn run lint
+      #- run: yarn run lint
       - run: echo finish
