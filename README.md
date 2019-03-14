@@ -59,3 +59,4 @@ docker volume rm kinshai_node_modules
 - [Netlify: All-in-one platform for automating modern web projects.](https://www.netlify.com/)
 - [Continuous Integration and Delivery - CircleCI](https://circleci.com/)
 - [How to ensure JavaScript code quality | DeepScan](https://deepscan.io/home/)
+- [IFTTT helps your apps and devices work together](https://ifttt.com/)
