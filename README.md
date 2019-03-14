@@ -56,4 +56,6 @@ docker volume rm kinshai_node_modules
 
 ### reference
 - [Gatsby\.js Tutorial \| GatsbyJS](https://www.gatsbyjs.org/tutorial/)
-- [Netlify: All\-in\-one platform for automating modern web projects\.](https://www.netlify.com/)
+- [Netlify: All-in-one platform for automating modern web projects.](https://www.netlify.com/)
+- [Continuous Integration and Delivery - CircleCI](https://circleci.com/)
+- [How to ensure JavaScript code quality | DeepScan](https://deepscan.io/home/)
