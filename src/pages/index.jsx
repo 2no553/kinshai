@@ -44,15 +44,15 @@ export const pageQuery = graphql`
           label
           path
         }
-        author {
-          name
-          email
-          telegram
-          twitter
-          github
-          rss
-          vk
-        }
+//         author {
+//           name
+//           email
+//           telegram
+//           twitter
+//           github
+//           rss
+//           vk
+//         }
       }
     }
     allMarkdownRemark(
