@@ -39,7 +39,7 @@ cd kinshai/
 docker-compose up -d --build
 
 3. setting gatsby
-docker-comopose exec app sh
+docker-compose exec app sh
 yarn global add gatsby-cli
 yarn install
 
