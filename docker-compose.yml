@@ -1,10 +1,8 @@
 version: '3'
 services:
   app:
-    build: .
+    image: fsninomiya/kinshai-gatsbyjs
     working_dir: /srv
-    environment:
-      - TZ=Asia/Tokyo
     volumes:
       - .:/srv
       - node_modules:/srv/node_modules

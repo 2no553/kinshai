@@ -7,7 +7,6 @@ docker-compose up -d --build
 
 2. install gatsbyjs
 docker-compose exec app sh
-yarn global add gatsby-cli
 yarn install
 
 3. start page
