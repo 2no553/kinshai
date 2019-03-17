@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.15.3-jessie
+      - image: fsninomiya/kinshai-gatsbyjs
     environment:
       TZ: Asia/Tokyo
     working_directory: ~/repo
@@ -18,7 +18,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn global add gatsby-cli
       - run: yarn install
 
       - save_cache:
